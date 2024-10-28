@@ -1,0 +1,14 @@
+                    Discussion Questions
+
+(1) Advantages of Recursive vs. Iterative Approaches:
+Recursive code is usually simpler and kinda more intuitive, but it can get pretty inefficient for large n values because of doing the same calculations multiple times.
+Iterative solutions tend to be faster and have lower time and space complexity, although they might need a bit more code for things like tree traversal and stuff.
+
+(2) How Memoization Helps Out:
+Memoization really speeds up recursive functions by stopping it from doing the same calculations again and again, making the function way faster. But, it does take up more memory since it has to store all those intermediate results.
+
+(3) When Would You Want to Use a Generator:
+Generators are great if you need to handle big streams of data without using up a lot of memory, since they just give back one result at a time instead of storing everything in memory at once.
+
+(4) Space Complexity Differences:
+Recursive functions take up more memory because they make a new stack frame every time they call themselves, while iterative and generator-based solutions have low or nearly constant memory usage.
