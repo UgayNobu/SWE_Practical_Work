@@ -170,32 +170,4 @@ print(f"Linear Search: Index of {value} is {index}, Comparisons made: {compariso
 index, comparisons = binary_count_number_of_comparisons(sorted_list, value)
 print(f"Binary Search: Index of {value} is {index}, Comparisons made: {comparisons}")
 
-## Implement a jump search algorithm and compare its performance with linear and binary search.
-def find_integer(x):
-    apppeox_root = 0
-    while (apppeox_root + 1) * (apppeox_root + 1) <= x:
-        apppeox_root += 1
-    return apppeox_root
-
-def jump_search(arr, value):
-    length = len(arr)
-    jump_distance = find_integer(length)  
-    initial_position = 0
-
-    while initial_position < length and arr[min(jump_distance, length) - 1] < value:
-        initial_position = jump_distance
-        jump_distance += jump_search(length)
-        if initial_position >= length:
-            return -1  
-
-    for current_position in range(initial_position, min(jump_distance, length)):
-        if arr[current_position] == value:
-            return current_position
-    return -1  
-
-# Test the function
-clean_list = [1, 3, 5, 6, 8, 12, 14, 18, 20, 22, 25]
-vlaue = 18
-outcome = jump_search(clean_list, value)
-print(f"Jump Search: Index of {vlaue} is {outcome}")
 
